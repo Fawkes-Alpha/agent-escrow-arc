@@ -9,6 +9,7 @@ gets a refund after the deadline. Neither side can take the money unilaterally.
 
 | | |
 |---|---|
+| **Live app** | **https://stunning-kangaroo-c3921a.netlify.app** |
 | **Contract** | [`0xd7589da91061f2f27ac118b22fcc3822f569359c`](https://explorer.arc.io/address/0xd7589da91061f2f27ac118b22fcc3822f569359c) |
 | **Network** | Arc mainnet, chainId 5042 |
 | **Asset** | USDC `0x3600…0000`, 6 decimals via the ERC-20 interface |
