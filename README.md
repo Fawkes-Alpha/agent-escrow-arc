@@ -9,7 +9,7 @@ gets a refund after the deadline. Neither side can take the money unilaterally.
 
 | | |
 |---|---|
-| **Live app** | **https://stunning-kangaroo-c3921a.netlify.app** |
+| **Live app** | **https://agent-escrow-arc.netlify.app** |
 | **Contract** | [`0xd7589da91061f2f27ac118b22fcc3822f569359c`](https://explorer.arc.io/address/0xd7589da91061f2f27ac118b22fcc3822f569359c) |
 | **Network** | Arc mainnet, chainId 5042 |
 | **Asset** | USDC `0x3600…0000`, 6 decimals via the ERC-20 interface |
@@ -157,6 +157,20 @@ forge test
 ```
 
 ---
+
+## Known issue: MetaMask flags the domain
+
+MetaMask shows a red "this site has signs of phishing" warning when you click Connect
+Wallet. It is a false positive from its heuristic site scanner, which flags any new
+domain with no reputation that requests a wallet connection. I deployed the same build
+to both Netlify and Vercel and got the identical warning on both, so it is not specific
+to either host.
+
+The site is a static build with no backend. The full source is in this repo, the contract
+address is compiled in at
+[`src/escrow-contract.ts`](src/escrow-contract.ts), and the contract itself is
+[`contracts/AgentEscrow.sol`](contracts/AgentEscrow.sol) — you can read exactly what it
+calls before connecting anything. A false-positive review has been requested.
 
 ## What is not done
 
