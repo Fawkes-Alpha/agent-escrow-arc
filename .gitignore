@@ -1,0 +1,30 @@
+# ===== BI MAT — KHONG BAO GIO COMMIT =====
+# .env cua Arc Studio chua RPC_PROXY_TOKEN (JWT gan voi tai khoan).
+.env
+.env.*
+*.key
+*.pem
+
+# ===== LOG PHIEN LAM VIEC CUA ARC STUDIO =====
+# Chua dau vet phien lam viec, khong lien quan den nguoi doc repo.
+console.jsonl
+traces.jsonl
+.agents/
+
+# ===== FILE BUILD SINH RA TU DONG =====
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+node_modules/
+dist/
+.vite/
+
+# ===== KHAC =====
+*.log
+.DS_Store
+.vercel/
+.netlify/
+
+# ===== NGOAI LE =====
+# File mau khong chua bi mat, phai nam trong repo.
+!.env.example
